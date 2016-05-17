@@ -1,0 +1,37 @@
+<div class="container" ng-init="moviesVm.getById()">
+    <h1>Movie Details <a href="#/movies">Back</a></h1>
+    <h1>{{moviesVm.movie.title}}</h1>
+    <hr>
+    <div id="movie-img"> <img id="moviedetail-img" ng-src="{{movieDetailVm.movie.poster}}"></div>
+    <div class="details">
+        <div class="movie-detail">
+            <p><b>Genre: </b> {{moviesVm.movie.genre}}</p>
+            <p><b>Country: </b>{{moviesVm.movie.country}}</p>
+            <p><b>Year: </b>{{moviesVm.movie.year}}</p>
+            <p><b>Actors: </b>{{moviesVm.movie.actors}}</p>
+            <p><b>Director: </b>{{moviesVm.movie.director}}</p>
+            <p><b>Writer: </b>{{moviesVm.movie.writer}}</p>
+            <p><b>IMDB Rating: </b>{{moviesVm.movie.IMDBRating}}</p>
+            <p><b>IMDB Link: </b><a href="http://www.imdb.com/title/{{moviesVm.movie.IMDBID}}">IMDB LINK</a></p>
+            <p><b>Language: </b>{{moviesVm.movie.language}}</p>
+            <p><b>Release Date: </b>{{moviesVm.movie.ReleaseDate}}</p>
+            <p><b>Running Time: </b>{{moviesVm.movie.RunningTime}}</p>
+            <p><b>Type: </b>{{moviesVm.movie.type}}</p>
+        </div>
+        <hr>
+        <p><a href="#/reviews/{{moviesVm.movie.id}}"> View Reviews</a></p>
+        <p><a href="#/setReview"> Write Your Review</a></p>
+        <hr>
+    </div>
+</div>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>-->

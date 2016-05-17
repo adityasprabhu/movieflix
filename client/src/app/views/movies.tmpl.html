@@ -1,0 +1,57 @@
+<div class="container" ng-init="moviesVm.getMovies()">
+    <h2>All Movies</h2>
+    <div class="filtermovies">
+        <ul class="container">
+            <li class="search-box"><h4>Search</h4><input type="text" class="form-control" ng-model="moviesVm.searchText"
+                                id="search" placeholder="Enter Title or Year or Genre"></li>
+            <li class="sort">
+                <div class="optionsmenu">
+                    <span class="glyphicon glyphicon-pencil"><b>View By</b></span>
+                    <div class="optionsmenu-content">
+                        <p ng-click="moviesVm.changeSort('year')">Year</p>
+                        <p ng-click="moviesVm.changeSort('IMDBRating')">IMDB Ratings</p>
+                        <p ng-click="moviesVm.changeSort('IMDBVotes')">IMDB Votes</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+        <tr class="list">
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Language</th>
+            <th>Runtime</th>
+            <th>Year</th>
+            <th>Type</th>
+            <th>IMDB Ratings</th>
+            <th>IMDB Votes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="movie in moviesVm.movies | filter:moviesVm.searchText | orderBy:moviesVm.sorter.by:moviesVm.sorter.reverse">
+            <td><a href="#/movies/{{movie.id}}">{{movie.title}}</a></td>
+            <td>{{movie.genre}}</td>
+            <td>{{movie.language}}</td>
+            <td>{{movie.runtime}}</td>
+            <td>{{movie.year}}</td>
+            <td>{{movie.type}}</td>
+            <td>{{movie.IMDBRating}}</td>
+            <td>{{movie.IMDBVotes}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>-->
