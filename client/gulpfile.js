@@ -1,5 +1,5 @@
 /**
- * Created by Aditya on 5/10/2016.
+ * Created by Aditya on 5/10/2016
  */
 var gulp = require('gulp'),
     clean = require('gulp-clean'),
