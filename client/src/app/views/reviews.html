@@ -1,0 +1,19 @@
+<div class="container" ng-init="reviewVm.getReviews()">
+    <div ng-repeat="review in reviewVm.reviews">
+        <p>Comment: {{review.review}}</p>
+        <p>Rating: {{review.rating}}</p>
+        <p>User: {{review.user.firstName}}</p>
+        <hr>
+    </div>
+</div>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>-->

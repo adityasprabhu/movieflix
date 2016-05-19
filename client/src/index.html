@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="movieflix">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieFlix!</title>
+</head>
+
+<body class="main">
+<header ng-controller="DisplayController as dc">
+    <ul>
+        <li ng-show="dc.values.SignIn"><a href="#/signin">Sign In</a></li>
+        <li ng-show="dc.values.SignUp"><a href="#/signup">Sign Up</a></li>
+        <li ng-show="dc.values.Movies"><a href="#/movies">Movies</a></li>
+        <li ng-show="dc.values.TopMovies"><a href="#/topMovies">Top Movies</a></li>
+    </ul>
+</header>
+</body>
+</html>
